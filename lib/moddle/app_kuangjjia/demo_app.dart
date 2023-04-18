@@ -1,5 +1,6 @@
 import 'package:demo/moddle/07_scopedModel/scopedModel.dart';
 import 'package:demo/moddle/09_bloc/BlocDemo.dart';
+import 'package:demo/moddle/11_http/http-Demo.dart';
 import 'package:demo/moddle/11_http/httpDemo.dart';
  import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -23,7 +24,7 @@ class Demo extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       // home: Home(),
-      initialRoute: '/http',
+      initialRoute: '/htpp_demo',
       routes: {
         '/': (context) => Home(
               loginY_N: false,
@@ -33,7 +34,8 @@ class Demo extends StatelessWidget {
          '/ScopeModel':(context)=> StateManagement_Scope_Demo(),
         '/Stream':(context)=>StreamDemo(),
         '/RxDart':(context)=>Bloc_Demo(),
-        '/http':(context)=>HttpDemo()
+        '/http':(context)=>HttpDemo(),
+        '/htpp_demo':(context)=>Http_Demo()
       },
       theme: ThemeData(
           primaryColor: Colors.cyanAccent,

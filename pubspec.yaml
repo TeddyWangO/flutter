@@ -41,6 +41,7 @@ dependencies:
   redux: ">=5.0.0 <6.0.0"
   flutter_redux: ^0.8.2
   http: ^0.13.0
+  dio: ^4.0.0
 
 
 

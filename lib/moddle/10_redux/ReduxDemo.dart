@@ -3,9 +3,10 @@ import 'package:flutter_redux/flutter_redux.dart';
 import 'package:redux/redux.dart';
 
 
-enum Actions { Increment }
+enum Actions { increment }
+
 int counterReducer(state, action) {
-  if (action == Actions.Increment) {
+  if (action == Actions.increment) {
     return state + 1;
   }
   return state;
@@ -13,7 +14,7 @@ int counterReducer(state, action) {
 
 void main() {
   final store = Store<int>(( state, action) {
-    if(action == Actions.Increment) {
+    if(action == Actions.increment) {
       return  state + 1;
     }
     return state;
@@ -49,7 +50,7 @@ class _MyHomeState extends State<MyHome> {
 
       floatingActionButton: StoreConnector<int, VoidCallback>(
         //将Action进行分发
-        converter: (store) => () => store.dispatch(Actions.Increment),
+        converter: (store) => () => store.dispatch(Actions.increment),
         builder: (context, cb) =>
             FloatingActionButton(
               onPressed: cb,
